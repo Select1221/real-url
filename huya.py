@@ -51,8 +51,8 @@ def get_real_url(room_id):
         real_url = '未开播或直播间不存在'
     return real_url
 
-
-rid = input('输入虎牙直播房间号：\n')
-real_url = get_real_url(rid)
-print('该直播间源地址为：')
-print(real_url)
+if __name__ == '__main__':
+    rid = input('输入虎牙直播房间号：\n')
+    real_url = get_real_url(rid)
+    print('该直播间源地址为：')
+    print(real_url)
