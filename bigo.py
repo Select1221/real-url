@@ -5,6 +5,7 @@
 # @Blog: https://wbt5.com
 # BIGO LIVE:https://www.bigo.tv/cn/
 
+import sys
 import requests
 
 
@@ -32,5 +33,5 @@ def get_real_url(rid):
 
 
 if __name__ == '__main__':
-    r = input('输入bigo直播房间号：\n')
+    r = sys.argv[1]
     print(get_real_url(r))
