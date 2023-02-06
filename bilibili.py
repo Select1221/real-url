@@ -58,10 +58,10 @@ class BiliBili:
             stream_info = res['data']['playurl_info']['playurl']['stream']
 
         stream_urls = {}
-        # flv流无法播放，暂修改成获取hls格式的流，
+        # 修改 format_name 获取flv,ts,fmp4的流
         for data in stream_info:
             format_name = data['format'][0]['format_name']
-            if format_name == 'ts':
+            if format_name == 'flv':
                 base_url = data['format'][-1]['codec'][0]['base_url']
                 url_info = data['format'][-1]['codec'][0]['url_info']
                 for i, info in enumerate(url_info):
